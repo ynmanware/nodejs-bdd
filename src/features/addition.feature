@@ -10,4 +10,5 @@ Feature: Addition
     Examples:
       | result | first | second |
       | 12     | 5     | 7      |
-      | 20     | 5     | 15     |
+      | 25     | 10    | 15     |
+      | 35     | 10    | 25     |

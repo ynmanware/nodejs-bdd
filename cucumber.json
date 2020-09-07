@@ -1,0 +1,398 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Addition",
+    "line": 2,
+    "id": "addition",
+    "tags": [
+      {
+        "name": "@Addition-2",
+        "line": 1
+      }
+    ],
+    "uri": "src/features/addition.feature",
+    "elements": [
+      {
+        "id": "addition;addition-first-+-second",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "addition first + second",
+        "tags": [
+          {
+            "name": "@Addition-2",
+            "line": 1
+          },
+          {
+            "name": "@scenario-21",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I start with 5",
+            "match": {
+              "location": "src/steps/maths.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I add 7",
+            "match": {
+              "location": "src/steps/maths.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I end up with 12",
+            "match": {
+              "location": "src/steps/maths.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "addition;addition-first-+-second",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "addition first + second",
+        "tags": [
+          {
+            "name": "@Addition-2",
+            "line": 1
+          },
+          {
+            "name": "@scenario-21",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I start with 10",
+            "match": {
+              "location": "src/steps/maths.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I add 15",
+            "match": {
+              "location": "src/steps/maths.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I end up with 25",
+            "match": {
+              "location": "src/steps/maths.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "addition;addition-first-+-second",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "addition first + second",
+        "tags": [
+          {
+            "name": "@Addition-2",
+            "line": 1
+          },
+          {
+            "name": "@scenario-21",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I start with 10",
+            "match": {
+              "location": "src/steps/maths.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I add 25",
+            "match": {
+              "location": "src/steps/maths.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I end up with 35",
+            "match": {
+              "location": "src/steps/maths.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  In order to do maths\n  As a developer\n  I want to increment variables",
+    "keyword": "Feature",
+    "name": "Simple maths",
+    "line": 1,
+    "id": "simple-maths",
+    "tags": [],
+    "uri": "src/features/simple_math.feature",
+    "elements": [
+      {
+        "id": "simple-maths;easy-maths",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "easy maths",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "a variable set to 1",
+            "match": {
+              "location": "src/steps/step.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I increment the variable by 1",
+            "match": {
+              "location": "src/steps/step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the variable should contain 2",
+            "match": {
+              "location": "src/steps/step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "much more complex stuff",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a variable set to 100",
+            "match": {
+              "location": "src/steps/step.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I increment the variable by 5",
+            "match": {
+              "location": "src/steps/step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the variable should contain 105",
+            "match": {
+              "location": "src/steps/step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "much more complex stuff",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a variable set to 99",
+            "match": {
+              "location": "src/steps/step.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I increment the variable by 1234",
+            "match": {
+              "location": "src/steps/step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the variable should contain 1333",
+            "match": {
+              "location": "src/steps/step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "much more complex stuff",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a variable set to 12",
+            "match": {
+              "location": "src/steps/step.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I increment the variable by 5",
+            "match": {
+              "location": "src/steps/step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the variable should contain 17",
+            "match": {
+              "location": "src/steps/step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
