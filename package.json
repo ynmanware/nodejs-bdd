@@ -14,6 +14,7 @@
     "log4js": "^3.0.6"
   },
   "devDependencies": {
-    "cucumber": "^5.1.0"
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0"
   }
 }
