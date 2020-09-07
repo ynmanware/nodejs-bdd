@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js src/features/ -r src/steps/"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 --world-parameters '{\"fancySetting\":true}'",
+    "report": "node ./report.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "log4js": "^3.0.6"
   },
   "devDependencies": {
-    "cucumber": "^5.1.0"
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0"
   }
 }
