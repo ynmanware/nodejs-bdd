@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 --world-parameters '{\"fancySetting\":true}'",
+    "report": "node ./report.js"
   },
   "author": "",
   "license": "ISC",

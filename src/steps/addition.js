@@ -3,7 +3,7 @@ const assert = require("assert").strict
 
 Given("a variable set to {int}", function(number) {
     this.setTo(number);
-    console.log(`processId: ${process.pid}`);
+    console.info(`feature 2 - processId: ${process.pid}`);
 });
 
 When("I increment the variable by {int}", function(number) {
