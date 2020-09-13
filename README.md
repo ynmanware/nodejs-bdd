@@ -5,20 +5,18 @@ contain BDD test cases for Order Aggregate
 Feature files are located in src/features
 Steps are located in src/steps
 
-#### Configuration 
-```
-src/kafka/config
-src/odata/config
-```
-
-The test cases should ideally be triggered on each commit to candidate branch
-
-### install 
+#### install 
 ```
 npm i
+npm install -g json-server
 ```
 
-### run test 
+#### start mock REST API
+```
+json-server --watch db.json
+```
+
+#### start test 
 ```
 npm test
 ```

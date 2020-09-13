@@ -9,7 +9,7 @@ const postContact = (data) => {
 }
 
 const addSecondaryPhone = (id, phoneNumber) => {
-    return restHelper.postData(`${process.env.DIRECTORY_SERVICE_URL}`, {'secondaryPhoneNumber': phoneNumber});
+    return restHelper.patchData(`${process.env.DIRECTORY_SERVICE_URL}/${id}`, {'secondaryPhoneNumber': phoneNumber});
 }
 
 const deleteContact = (id) => {

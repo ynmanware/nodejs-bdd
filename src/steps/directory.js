@@ -13,7 +13,7 @@ When('I post contact, new contact is created in DB', async function () {
 
 When('I add {string} to the contact using {int}', async function (phoneNumber, id) {
     const response = await service.addSecondaryPhone(id, phoneNumber);
-    assert.equal(response.status, 201);
+    assert.equal(response.status, 200);
 })
 
 Then(/^I read directory for (.*), I receive (.*)$/, async function (id, expectedResponse) {
@@ -21,7 +21,7 @@ Then(/^I read directory for (.*), I receive (.*)$/, async function (id, expected
         id
     )
     console.info(JSON.stringify(response.data));
-    //assert.deepEqual(response.data, JSON.parse(expectedResponse));
+    assert.deepEqual(response.data, JSON.parse(expectedResponse));
 })
 
 Then('I am able to delete the contact with {int}', async function (id) {
