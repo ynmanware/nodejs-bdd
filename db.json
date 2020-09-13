@@ -1,0 +1,85 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "name": "Yogesh"
+    },
+    {
+      "name": "Sayuri",
+      "id": 2
+    },
+    {
+      "name": "Sayuri",
+      "id": 3
+    },
+    {
+      "name": "Sayuri",
+      "id": 4
+    }
+  ],
+  "directory": [
+    {
+      "id": 90,
+      "name": "Michael Stanton DVM",
+      "email": "Joany.Hyatt@yahoo.com",
+      "phoneNumber": "(914) 249-3519",
+      "secondaryPhoneNumber": "(914) 249-3519"
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 100
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 101
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 102
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 103
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 104
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 105
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 106
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 107
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 108
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 109
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 110
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 111
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 112
+    },
+    {
+      "secondaryPhoneNumber": "(914) 249-3519",
+      "id": 113
+    }
+  ]
+}

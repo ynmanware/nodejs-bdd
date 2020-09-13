@@ -26,7 +26,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 3000000
             }
           },
           {
@@ -35,11 +35,11 @@
             "line": 8,
             "name": "I increment the variable by 1",
             "match": {
-              "location": "src/steps/addition.js:9"
+              "location": "src/steps/addition.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "line": 9,
             "name": "the variable should contain 2",
             "match": {
-              "location": "src/steps/addition.js:13"
+              "location": "src/steps/addition.js:14"
             },
             "result": {
               "status": "passed",
@@ -84,11 +84,11 @@
             "line": 13,
             "name": "I increment the variable by 5",
             "match": {
-              "location": "src/steps/addition.js:9"
+              "location": "src/steps/addition.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 2000000
             }
           },
           {
@@ -97,11 +97,11 @@
             "line": 14,
             "name": "the variable should contain 105",
             "match": {
-              "location": "src/steps/addition.js:13"
+              "location": "src/steps/addition.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
@@ -124,7 +124,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 3000000
             }
           },
           {
@@ -133,11 +133,11 @@
             "line": 13,
             "name": "I increment the variable by 1234",
             "match": {
-              "location": "src/steps/addition.js:9"
+              "location": "src/steps/addition.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 2000000
             }
           },
           {
@@ -146,11 +146,11 @@
             "line": 14,
             "name": "the variable should contain 1333",
             "match": {
-              "location": "src/steps/addition.js:13"
+              "location": "src/steps/addition.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
@@ -182,11 +182,11 @@
             "line": 13,
             "name": "I increment the variable by 5",
             "match": {
-              "location": "src/steps/addition.js:9"
+              "location": "src/steps/addition.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -195,11 +195,11 @@
             "line": 14,
             "name": "the variable should contain 17",
             "match": {
-              "location": "src/steps/addition.js:13"
+              "location": "src/steps/addition.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
@@ -238,7 +238,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1007000000
+              "duration": 1004000000
             }
           },
           {
@@ -251,7 +251,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -264,7 +264,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           }
         ]
@@ -292,7 +292,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1007000000
+              "duration": 1005000000
             }
           },
           {
@@ -305,7 +305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -346,116 +346,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1007000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I add 25",
-            "match": {
-              "location": "src/steps/multiplication.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I end up with 250",
-            "match": {
-              "location": "src/steps/multiplication.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "multiplication;addition-first-+-second",
-        "keyword": "Scenario",
-        "line": 14,
-        "name": "addition first + second",
-        "tags": [
-          {
-            "name": "@scenario-21",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I start with 100",
-            "match": {
-              "location": "src/steps/multiplication.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1005000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I add 25",
-            "match": {
-              "location": "src/steps/multiplication.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I end up with 250",
-            "match": {
-              "location": "src/steps/multiplication.js:19"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 3000000,
-              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2500 !== 250\n\n    + expected - actual\n\n    -2500\n    +250\n\n    at CustomWorld.<anonymous> (/Users/ym/mws/bdd/src/steps/multiplication.js:20:12)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "multiplication;addition-first-+-second",
-        "keyword": "Scenario",
-        "line": 15,
-        "name": "addition first + second",
-        "tags": [
-          {
-            "name": "@scenario-21",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I start with 1000",
-            "match": {
-              "location": "src/steps/multiplication.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1003000000
+              "duration": 1006000000
             }
           },
           {
@@ -480,9 +371,104 @@
               "location": "src/steps/multiplication.js:19"
             },
             "result": {
-              "status": "failed",
-              "duration": 4000000,
-              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n25000 !== 250\n\n    + expected - actual\n\n    -25000\n    +250\n\n    at CustomWorld.<anonymous> (/Users/ym/mws/bdd/src/steps/multiplication.js:20:12)"
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  In order manage directory\n  As a developer\n  I want to make sure CRUD operations through REST API works fine",
+    "keyword": "Feature",
+    "name": "Directory Service",
+    "line": 2,
+    "id": "directory-service",
+    "tags": [
+      {
+        "name": "@directory",
+        "line": 1
+      }
+    ],
+    "uri": "src/features/directory.feature",
+    "elements": [
+      {
+        "id": "directory-service;create,-read,-update,-delete-works-as-expected",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "create, read, update, delete works as expected",
+        "tags": [
+          {
+            "name": "@directory",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "a contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
+            "match": {
+              "location": "src/steps/directory.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I post contact, new contact is created in DB",
+            "match": {
+              "location": "src/steps/directory.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I can add '(914) 249-3519' to the contact using 99",
+            "match": {
+              "location": "src/steps/directory.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I read directory for 99, I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
+            "match": {
+              "location": "src/steps/directory.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I am able to delete the contact with 99",
+            "match": {
+              "location": "src/steps/directory.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
             }
           }
         ]
