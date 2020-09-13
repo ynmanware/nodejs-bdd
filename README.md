@@ -1,8 +1,5 @@
 # BDD using NodeJs and cucumberJs
 
-Feature files are located in src/features
-Steps are located in src/steps
-
 #### install 
 ```
 npm i
