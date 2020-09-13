@@ -26,7 +26,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 1000000
             }
           },
           {
@@ -39,7 +39,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 1000000
             }
           },
           {
@@ -75,7 +75,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 1000000
             }
           },
           {
@@ -88,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -101,56 +101,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "addition;much-more-complex-stuff",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "much more complex stuff",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "a variable set to 99",
-            "match": {
-              "location": "src/steps/addition.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I increment the variable by 1234",
-            "match": {
-              "location": "src/steps/addition.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the variable should contain 1333",
-            "match": {
-              "location": "src/steps/addition.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           }
         ]
@@ -186,7 +137,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -199,7 +150,56 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "addition;much-more-complex-stuff",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "much more complex stuff",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a variable set to 99",
+            "match": {
+              "location": "src/steps/addition.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I increment the variable by 1234",
+            "match": {
+              "location": "src/steps/addition.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the variable should contain 1333",
+            "match": {
+              "location": "src/steps/addition.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
             }
           }
         ]
@@ -238,7 +238,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1004000000
+              "duration": 1003000000
             }
           },
           {
@@ -292,7 +292,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1005000000
+              "duration": 1002000000
             }
           },
           {
@@ -305,7 +305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -318,7 +318,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           }
         ]
@@ -346,7 +346,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1006000000
+              "duration": 1003000000
             }
           },
           {
@@ -359,7 +359,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -372,7 +372,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           }
         ]
@@ -429,14 +429,14 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 21000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "And ",
             "line": 10,
-            "name": "I can add '(914) 249-3519' to the contact using 99",
+            "name": "I add '(914) 249-3519' to the contact using 99",
             "match": {
               "location": "src/steps/directory.js:14"
             },
@@ -455,7 +455,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 9000000
             }
           },
           {
@@ -468,7 +468,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 6000000
             }
           }
         ]

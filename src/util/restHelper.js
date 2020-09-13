@@ -20,7 +20,7 @@ const postData = (url, data) => {
 
 const patchData = (url, data) => {
     try {
-        return axios.post(url, data);
+        return axios.patch(url, data);
     } catch (e) {
         console.error('exception occurred while PATCH', e);
         throw e;
