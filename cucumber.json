@@ -26,7 +26,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 7000000
             }
           },
           {
@@ -75,7 +75,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           },
           {
@@ -88,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -96,6 +96,55 @@
             "keyword": "Then ",
             "line": 14,
             "name": "the variable should contain 105",
+            "match": {
+              "location": "src/steps/addition.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "addition;much-more-complex-stuff",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "much more complex stuff",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a variable set to 99",
+            "match": {
+              "location": "src/steps/addition.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I increment the variable by 1234",
+            "match": {
+              "location": "src/steps/addition.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the variable should contain 1333",
             "match": {
               "location": "src/steps/addition.js:14"
             },
@@ -154,52 +203,99 @@
             }
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "description": "  In order manage directory\n  As a developer\n  I want to make sure CRUD operations through REST API works fine",
+    "keyword": "Feature",
+    "name": "Directory Service",
+    "line": 2,
+    "id": "directory-service",
+    "tags": [
       {
-        "id": "addition;much-more-complex-stuff",
+        "name": "@directory",
+        "line": 1
+      }
+    ],
+    "uri": "src/features/directory.feature",
+    "elements": [
+      {
+        "id": "directory-service;create,-read,-update,-delete-works-as-expected",
         "keyword": "Scenario",
-        "line": 19,
-        "name": "much more complex stuff",
-        "tags": [],
+        "line": 16,
+        "name": "create, read, update, delete works as expected",
+        "tags": [
+          {
+            "name": "@directory",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 12,
-            "name": "a variable set to 99",
+            "line": 8,
+            "name": "a contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
             "match": {
-              "location": "src/steps/addition.js:4"
+              "location": "src/steps/directory.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 13,
-            "name": "I increment the variable by 1234",
+            "line": 9,
+            "name": "I create contact",
             "match": {
-              "location": "src/steps/addition.js:10"
+              "location": "src/steps/directory.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 57000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I add '(914) 249-3519' to the contact using 99",
+            "match": {
+              "location": "src/steps/directory.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
-            "name": "the variable should contain 1333",
+            "line": 11,
+            "name": "I read contact for 99, I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
             "match": {
-              "location": "src/steps/addition.js:14"
+              "location": "src/steps/directory.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I delete the contact with 99",
+            "match": {
+              "location": "src/steps/directory.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
             }
           }
         ]
@@ -238,7 +334,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1003000000
+              "duration": 1004000000
             }
           },
           {
@@ -292,7 +388,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1002000000
+              "duration": 1004000000
             }
           },
           {
@@ -305,7 +401,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -346,7 +442,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1003000000
+              "duration": 1002000000
             }
           },
           {
@@ -373,102 +469,6 @@
             "result": {
               "status": "passed",
               "duration": 1000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "description": "  In order manage directory\n  As a developer\n  I want to make sure CRUD operations through REST API works fine",
-    "keyword": "Feature",
-    "name": "Directory Service",
-    "line": 2,
-    "id": "directory-service",
-    "tags": [
-      {
-        "name": "@directory",
-        "line": 1
-      }
-    ],
-    "uri": "src/features/directory.feature",
-    "elements": [
-      {
-        "id": "directory-service;create,-read,-update,-delete-works-as-expected",
-        "keyword": "Scenario",
-        "line": 16,
-        "name": "create, read, update, delete works as expected",
-        "tags": [
-          {
-            "name": "@directory",
-            "line": 1
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "a contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
-            "match": {
-              "location": "src/steps/directory.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "I post contact, new contact is created in DB",
-            "match": {
-              "location": "src/steps/directory.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "I add '(914) 249-3519' to the contact using 99",
-            "match": {
-              "location": "src/steps/directory.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "I read directory for 99, I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
-            "match": {
-              "location": "src/steps/directory.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "I am able to delete the contact with 99",
-            "match": {
-              "location": "src/steps/directory.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6000000
             }
           }
         ]

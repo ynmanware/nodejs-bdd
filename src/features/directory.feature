@@ -6,10 +6,10 @@ Feature: Directory Service
 
   Scenario Outline: create, read, update, delete works as expected
     Given a contact <request>
-    When I post contact, new contact is created in DB
+    When I create contact
     And I add <secondaryPhoneNumber> to the contact using <id>
-    Then I read directory for <id>, I receive <contactResponse>
-    Then I am able to delete the contact with <id>
+    Then I read contact for <id>, I receive <contactResponse>
+    And I delete the contact with <id>
 
     Examples:
       | request                                                                                      | id | secondaryPhoneNumber | contactResponse                                                                                                                       |
