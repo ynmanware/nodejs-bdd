@@ -1,4 +1,5 @@
 # BDD using NodeJs and cucumberJs
+https://dev.to/ynmanware/bdd-for-rest-api-using-cucumber-js-2pol
 
 #### install 
 ```
@@ -13,7 +14,7 @@ json-server --watch db.json
 
 #### start test 
 ```
-npm test
+npm run directory-service-bdd
 ```
 
 For more information on Cucumber.js refer 

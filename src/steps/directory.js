@@ -1,28 +1,38 @@
-const {Given, When, Then} = require('cucumber');
+const {Given, When, Then, AfterAll, After} = require('cucumber');
 const assert = require('assert').strict
-const service = require('./../util/directory-service');
+const restHelper = require('./../util/restHelper');
 
-Given('a contact {}', function (request) {
+Given('A contact {}', function (request) {
     this.context['request'] = JSON.parse(request);
 });
 
-When('I create contact', async function () {
-    const response = await service.postContact(this.context['request']);
-    assert.equal(response.status, 201);
+When('I send POST request to {}', async function (path) {
+    this.context['response'] = await restHelper.postData(`${process.env.SERVICE_URL}${path}`, this.context['request']);
 })
 
-When('I add {string} to the contact using {int}', async function (phoneNumber, id) {
-    const response = await service.addSecondaryPhone(id, phoneNumber);
-    assert.equal(response.status, 200);
+Then('I get response code {int}', async function (code) {
+    assert.equal(this.context['response'].status, code);
+});
+
+When('I send PATCH request with a {} to {}', async function (phoneNumberPayload, path) {
+    const response = await restHelper.patchData(`${process.env.SERVICE_URL}${path}/${this.context['id']}`, JSON.parse(phoneNumberPayload));
+    this.context['response'] = response;
 })
 
-Then(/^I read contact for (.*), I receive (.*)$/, async function (id, expectedResponse) {
-    const response = await service.getContact(id)
-    console.info(JSON.stringify(response.data));
-    assert.deepEqual(response.data, JSON.parse(expectedResponse));
+Given('The contact with {int} exist', async function (id) {
+    this.context['id'] = id;
 })
 
-Then('I delete the contact with {int}', async function (id) {
-    const response = await service.deleteContact(id);
-    assert.equal(response.status, 200);
+When('I send GET request to {}', async function (path) {
+    const response = await restHelper.getData(`${process.env.SERVICE_URL}${path}/${this.context['id']}`);
+    this.context['response'] = response;
+})
+
+Then(/^I receive (.*)$/, async function (expectedResponse) {
+    assert.deepEqual(this.context['response'].data, JSON.parse(expectedResponse));
+})
+
+When('I send DELETE request to {}', async function (path) {
+    const response = await restHelper.deleteData(`${process.env.SERVICE_URL}${path}/${this.context['id']}`);
+    this.context['response'] = response;
 })

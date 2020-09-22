@@ -1,212 +1,5 @@
 [
   {
-    "description": "  In order to do maths\n  As a developer\n  I want to increment variables",
-    "keyword": "Feature",
-    "name": "Addition",
-    "line": 1,
-    "id": "addition",
-    "tags": [],
-    "uri": "src/features/addition.feature",
-    "elements": [
-      {
-        "id": "addition;easy-maths",
-        "keyword": "Scenario",
-        "line": 6,
-        "name": "easy maths",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "a variable set to 1",
-            "match": {
-              "location": "src/steps/addition.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "I increment the variable by 1",
-            "match": {
-              "location": "src/steps/addition.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "the variable should contain 2",
-            "match": {
-              "location": "src/steps/addition.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "addition;much-more-complex-stuff",
-        "keyword": "Scenario",
-        "line": 18,
-        "name": "much more complex stuff",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "a variable set to 100",
-            "match": {
-              "location": "src/steps/addition.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I increment the variable by 5",
-            "match": {
-              "location": "src/steps/addition.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the variable should contain 105",
-            "match": {
-              "location": "src/steps/addition.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "addition;much-more-complex-stuff",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "much more complex stuff",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "a variable set to 99",
-            "match": {
-              "location": "src/steps/addition.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I increment the variable by 1234",
-            "match": {
-              "location": "src/steps/addition.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the variable should contain 1333",
-            "match": {
-              "location": "src/steps/addition.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "addition;much-more-complex-stuff",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "much more complex stuff",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 12,
-            "name": "a variable set to 12",
-            "match": {
-              "location": "src/steps/addition.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I increment the variable by 5",
-            "match": {
-              "location": "src/steps/addition.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the variable should contain 17",
-            "match": {
-              "location": "src/steps/addition.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
     "description": "  In order manage directory\n  As a developer\n  I want to make sure CRUD operations through REST API works fine",
     "keyword": "Feature",
     "name": "Directory Service",
@@ -214,20 +7,20 @@
     "id": "directory-service",
     "tags": [
       {
-        "name": "@directory",
+        "name": "@directory-service",
         "line": 1
       }
     ],
     "uri": "src/features/directory.feature",
     "elements": [
       {
-        "id": "directory-service;create,-read,-update,-delete-works-as-expected",
+        "id": "directory-service;create-a-contact",
         "keyword": "Scenario",
-        "line": 16,
-        "name": "create, read, update, delete works as expected",
+        "line": 14,
+        "name": "create a contact",
         "tags": [
           {
-            "name": "@directory",
+            "name": "@directory-service",
             "line": 1
           }
         ],
@@ -237,7 +30,7 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "a contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
+            "name": "A contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
             "match": {
               "location": "src/steps/directory.js:5"
             },
@@ -250,22 +43,279 @@
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "I create contact",
+            "name": "I send POST request to /directory",
             "match": {
               "location": "src/steps/directory.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 57000000
+              "duration": 30000000
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 10,
-            "name": "I add '(914) 249-3519' to the contact using 99",
+            "name": "I get response code 201",
             "match": {
-              "location": "src/steps/directory.js:14"
+              "location": "src/steps/directory.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;create-a-contact",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "create a contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "A contact {\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\"}",
+            "match": {
+              "location": "src/steps/directory.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I send POST request to /directory",
+            "match": {
+              "location": "src/steps/directory.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I get response code 201",
+            "match": {
+              "location": "src/steps/directory.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;modify-contact",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "modify contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "The contact with 99 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send PATCH request with a {\"secondaryPhoneNumber\": \"(914) 249-3519\"} to /directory",
+            "match": {
+              "location": "src/steps/directory.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I get response code 200",
+            "match": {
+              "location": "src/steps/directory.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;modify-contact",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "modify contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "The contact with 7 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send PATCH request with a {\"secondaryPhoneNumber\": \"788.323.7782\"} to /directory",
+            "match": {
+              "location": "src/steps/directory.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I get response code 200",
+            "match": {
+              "location": "src/steps/directory.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;get-contact",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "get contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "The contact with 99 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I send GET request to /directory",
+            "match": {
+              "location": "src/steps/directory.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
+            "match": {
+              "location": "src/steps/directory.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;get-contact",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "get contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "The contact with 7 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I send GET request to /directory",
+            "match": {
+              "location": "src/steps/directory.js:26"
             },
             "result": {
               "status": "passed",
@@ -275,196 +325,118 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
-            "name": "I read contact for 99, I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
+            "line": 30,
+            "name": "I receive {\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\", \"secondaryPhoneNumber\": \"788.323.7782\"}",
             "match": {
-              "location": "src/steps/directory.js:19"
+              "location": "src/steps/directory.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;delete-contact",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "delete contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "The contact with 99 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I delete the contact with 99",
+            "keyword": "When ",
+            "line": 39,
+            "name": "I send DELETE request to /directory",
             "match": {
-              "location": "src/steps/directory.js:25"
+              "location": "src/steps/directory.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "I get response code 200",
+            "match": {
+              "location": "src/steps/directory.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;delete-contact",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "delete contact",
+        "tags": [
+          {
+            "name": "@directory-service",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "The contact with 7 exist",
+            "match": {
+              "location": "src/steps/directory.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I send DELETE request to /directory",
+            "match": {
+              "location": "src/steps/directory.js:35"
             },
             "result": {
               "status": "passed",
               "duration": 6000000
             }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "description": "  in order to do math as a developer ...",
-    "keyword": "Feature",
-    "name": "Multiplication",
-    "line": 1,
-    "id": "multiplication",
-    "tags": [],
-    "uri": "src/features/multiplication.feature",
-    "elements": [
-      {
-        "id": "multiplication;addition-first-+-second",
-        "keyword": "Scenario",
-        "line": 11,
-        "name": "addition first + second",
-        "tags": [
-          {
-            "name": "@scenario-21",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I start with 5",
-            "match": {
-              "location": "src/steps/multiplication.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1004000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I add 7",
-            "match": {
-              "location": "src/steps/multiplication.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "I end up with 35",
+            "line": 40,
+            "name": "I get response code 200",
             "match": {
-              "location": "src/steps/multiplication.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "multiplication;addition-first-+-second",
-        "keyword": "Scenario",
-        "line": 12,
-        "name": "addition first + second",
-        "tags": [
-          {
-            "name": "@scenario-21",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I start with 10",
-            "match": {
-              "location": "src/steps/multiplication.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1004000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I add 15",
-            "match": {
-              "location": "src/steps/multiplication.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I end up with 150",
-            "match": {
-              "location": "src/steps/multiplication.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "multiplication;addition-first-+-second",
-        "keyword": "Scenario",
-        "line": 13,
-        "name": "addition first + second",
-        "tags": [
-          {
-            "name": "@scenario-21",
-            "line": 3
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I start with 10",
-            "match": {
-              "location": "src/steps/multiplication.js:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1002000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 6,
-            "name": "I add 25",
-            "match": {
-              "location": "src/steps/multiplication.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I end up with 250",
-            "match": {
-              "location": "src/steps/multiplication.js:19"
+              "location": "src/steps/directory.js:13"
             },
             "result": {
               "status": "passed",

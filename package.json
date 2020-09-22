@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 --world-parameters '{\"fancySetting\":true}' && node ./report.js",
-    "test-derectory": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 --tag '@derectory' && node ./report.js",
-    "report": "node ./report.js"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
+    "directory-service": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --tags '@directory-service'",
+    "report": "node ./report.js",
+    "directory-service-bdd": "(yarn directory-service && yarn report) || yarn report"
   },
   "author": "",
   "license": "ISC",

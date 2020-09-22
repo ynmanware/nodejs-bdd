@@ -2,7 +2,7 @@ const faker = require('faker');
 const _ = require('lodash');
 
 
-_.times(100, (n) => {
+_.times(10, (n) => {
 
     const c = {}
     c.id = n;

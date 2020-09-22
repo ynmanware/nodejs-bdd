@@ -18,18 +18,18 @@ const postData = (url, data) => {
     }
 }
 
-const patchData = (url, data) => {
+const patchData = async (url, data) => {
     try {
-        return axios.patch(url, data);
+        return await axios.patch(url, data);
     } catch (e) {
         console.error('exception occurred while PATCH', e);
         throw e;
     }
 }
 
-const deleteData = (url, data) => {
+const deleteData = async (url, data) => {
     try {
-        return axios.delete(url);
+        return await axios.delete(url);
     } catch (e) {
         console.error('exception occurred while DELETE', e);
         throw e;
