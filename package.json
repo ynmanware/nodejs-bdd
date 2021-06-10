@@ -4,21 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
-    "directory-service": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --tags '@directory-service'",
-    "report": "node ./report.js",
-    "directory-service-bdd": "(yarn directory-service && yarn report) || yarn report"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 25 && node ./report.js",
+    "test-appointment": "./node_modules/.bin[pw\0987 u /cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --tags '@appointment or @balance'",
+    "report": "node ./report.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.885.0",
     "axios": "^0.20.0",
+    "dotenv-flow": "^3.2.0",
     "faker": "^5.1.0",
-    "lodash": "^4.17.20",
-    "dotenv-flow": "^3.2.0"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "cucumber": "^6.0.5",
-    "cucumber-html-reporter": "^5.2.0"
+    "cucumber-html-reporter": "^5.2.0",
+    "express": "^4.17.1"
   }
 }

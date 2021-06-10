@@ -7,6 +7,7 @@ if (!process.env.SERVICE_URL) {
 class CustomWorld {
     constructor({parameters}) {
         this.context = {};
+        this.context['userId'] = 'userId-3' + (new Date()).getTime()
         this.variable = 0;
     }
 

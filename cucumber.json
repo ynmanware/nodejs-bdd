@@ -1,38 +1,87 @@
 [
   {
-    "description": "  In order manage directory\n  As a developer\n  I want to make sure CRUD operations through REST API works fine",
     "keyword": "Feature",
-    "name": "Directory Service",
+    "name": "appointment",
     "line": 2,
-    "id": "directory-service",
+    "id": "appointment",
     "tags": [
       {
-        "name": "@directory-service",
+        "name": "@appointment",
         "line": 1
       }
     ],
-    "uri": "src/features/directory.feature",
+    "uri": "src/features/appointment.feature",
     "elements": [
       {
-        "id": "directory-service;create-a-contact",
+        "id": "appointment;customer-is-able-to-book-an-appointment",
         "keyword": "Scenario",
-        "line": 14,
-        "name": "create a contact",
+        "line": 17,
+        "name": "Customer is able to book an appointment",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "A contact {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:5"
+              "location": "src/steps/lexBot.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Customer says appointment",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 499000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -43,22 +92,74 @@
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "I send POST request to /directory",
+            "name": "Customer says today",
             "match": {
-              "location": "src/steps/directory.js:9"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 280000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "I get response code 201",
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
             "match": {
-              "location": "src/steps/directory.js:13"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 471000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -68,25 +169,224 @@
         ]
       },
       {
-        "id": "directory-service;create-a-contact",
+        "id": "appointment;customer-is-able-to-book-an-appointment",
         "keyword": "Scenario",
-        "line": 15,
-        "name": "create a contact",
+        "line": 18,
+        "name": "Customer is able to book an appointment",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "A contact {\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\"}",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:5"
+              "location": "src/steps/lexBot.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Customer says book an appointment",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 255000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m 'What type of appointment would you like to schedule?'\n\u001b[31m-\u001b[39m 'What type of appointment would you like?'\n                                          ^\n    + expected - actual\n\n    -What type of appointment would you like to schedule?\n    +What type of appointment would you like?\n\n    at comparePartialObject (/Users/ym/mws/bdd/src/steps/lexBot.js:26:20)\n    at CustomWorld.<anonymous> (/Users/ym/mws/bdd/src/steps/lexBot.js:18:9)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "appointment;customer-is-able-to-book-an-appointment",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Customer is able to book an appointment",
+        "tags": [
+          {
+            "name": "@appointment",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "src/steps/lexBot.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Customer says book an appointment",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 188000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -97,50 +397,22 @@
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "I send POST request to /directory",
+            "name": "Customer says today",
             "match": {
-              "location": "src/steps/directory.js:9"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 172000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "I get response code 201",
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
             "match": {
-              "location": "src/steps/directory.js:13"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          }
-        ]
-      },
-      {
-        "id": "directory-service;modify-contact",
-        "keyword": "Scenario",
-        "line": 24,
-        "name": "modify contact",
-        "tags": [
-          {
-            "name": "@directory-service",
-            "line": 1
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 18,
-            "name": "The contact with 99 exist",
-            "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -150,23 +422,49 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 19,
-            "name": "I send PATCH request with a {\"secondaryPhoneNumber\": \"(914) 249-3519\"} to /directory",
+            "line": 11,
+            "name": "Customer says afternoon",
             "match": {
-              "location": "src/steps/directory.js:17"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 183000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
-            "name": "I get response code 200",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
             "match": {
-              "location": "src/steps/directory.js:13"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -176,25 +474,23 @@
         ]
       },
       {
-        "id": "directory-service;modify-contact",
+        "id": "appointment;customer-is-able-to-book-an-appointment",
         "keyword": "Scenario",
-        "line": 25,
-        "name": "modify contact",
+        "line": 20,
+        "name": "Customer is able to book an appointment",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 18,
-            "name": "The contact with 7 exist",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:8"
             },
             "result": {
               "status": "passed",
@@ -204,23 +500,127 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 19,
-            "name": "I send PATCH request with a {\"secondaryPhoneNumber\": \"788.323.7782\"} to /directory",
+            "line": 5,
+            "name": "Customer says book an appointment",
             "match": {
-              "location": "src/steps/directory.js:17"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 282000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
-            "name": "I get response code 200",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
             "match": {
-              "location": "src/steps/directory.js:13"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 178000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -230,25 +630,23 @@
         ]
       },
       {
-        "id": "directory-service;get-contact",
+        "id": "appointment;customer-is-able-to-book-an-appointment",
         "keyword": "Scenario",
-        "line": 34,
-        "name": "get contact",
+        "line": 21,
+        "name": "Customer is able to book an appointment",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 28,
-            "name": "The contact with 99 exist",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:8"
             },
             "result": {
               "status": "passed",
@@ -258,23 +656,127 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 29,
-            "name": "I send GET request to /directory",
+            "line": 5,
+            "name": "Customer says book an appointment",
             "match": {
-              "location": "src/steps/directory.js:26"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 194000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 30,
-            "name": "I receive {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\",\"secondaryPhoneNumber\": \"(914) 249-3519\"}",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
             "match": {
-              "location": "src/steps/directory.js:31"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -284,25 +786,23 @@
         ]
       },
       {
-        "id": "directory-service;get-contact",
+        "id": "appointment;customer-is-able-to-book-an-appointment",
         "keyword": "Scenario",
-        "line": 35,
-        "name": "get contact",
+        "line": 22,
+        "name": "Customer is able to book an appointment",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 28,
-            "name": "The contact with 7 exist",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:8"
             },
             "result": {
               "status": "passed",
@@ -312,23 +812,127 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 29,
-            "name": "I send GET request to /directory",
+            "line": 5,
+            "name": "Customer says book an appointment",
             "match": {
-              "location": "src/steps/directory.js:26"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 189000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 30,
-            "name": "I receive {\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\", \"secondaryPhoneNumber\": \"788.323.7782\"}",
+            "line": 6,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
             "match": {
-              "location": "src/steps/directory.js:31"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
@@ -336,27 +940,40 @@
             }
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "balance",
+    "line": 2,
+    "id": "balance",
+    "tags": [
       {
-        "id": "directory-service;delete-contact",
+        "name": "@appointment",
+        "line": 1
+      }
+    ],
+    "uri": "src/features/balance.feature",
+    "elements": [
+      {
+        "id": "balance;customer-is-able-to-check-balance",
         "keyword": "Scenario",
-        "line": 44,
-        "name": "delete contact",
+        "line": 16,
+        "name": "Customer is able to check balance",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 38,
-            "name": "The contact with 99 exist",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:8"
             },
             "result": {
               "status": "passed",
@@ -366,51 +983,153 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 39,
-            "name": "I send DELETE request to /directory",
+            "line": 4,
+            "name": "Customer says appointment",
             "match": {
-              "location": "src/steps/directory.js:35"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 178000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 40,
-            "name": "I get response code 200",
+            "line": 5,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
             "match": {
-              "location": "src/steps/directory.js:13"
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
               "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
       },
       {
-        "id": "directory-service;delete-contact",
+        "id": "balance;customer-is-able-to-check-balance",
         "keyword": "Scenario",
-        "line": 45,
-        "name": "delete contact",
+        "line": 17,
+        "name": "Customer is able to check balance",
         "tags": [
           {
-            "name": "@directory-service",
+            "name": "@appointment",
             "line": 1
           }
         ],
         "type": "scenario",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 38,
-            "name": "The contact with 7 exist",
+            "keyword": "Before",
+            "hidden": true,
             "match": {
-              "location": "src/steps/directory.js:22"
+              "location": "src/steps/lexBot.js:8"
             },
             "result": {
               "status": "passed",
@@ -420,23 +1139,127 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 39,
-            "name": "I send DELETE request to /directory",
+            "line": 4,
+            "name": "Customer says appointment",
             "match": {
-              "location": "src/steps/directory.js:35"
+              "location": "src/steps/lexBot.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 171000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 40,
-            "name": "I get response code 200",
+            "line": 5,
+            "name": "Bot replies { \"intentName\": \"MakeAppointment_enAU\", \"message\": \"What type of appointment would you like to schedule?\", \"dialogState\": \"ElicitSlot\", \"slotToElicit\": \"AppointmentType\" }",
             "match": {
-              "location": "src/steps/directory.js:13"
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Customer says dentist",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 187000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"When should I schedule your dentist?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Date\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Customer says today",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"At what time on 2021-04-13?\",\"dialogState\":\"ElicitSlot\",\"slotToElicit\":\"Time\"}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Customer says afternoon",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 172000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":\"AF is available, should I go ahead and book your appointment?\",\"dialogState\":\"ConfirmIntent\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "Customer says yes",
+            "match": {
+              "location": "src/steps/lexBot.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Bot replies {\"intentName\":\"MakeAppointment_enAU\",\"message\":null,\"dialogState\":\"ReadyForFulfillment\",\"slotToElicit\":null}",
+            "match": {
+              "location": "src/steps/lexBot.js:17"
             },
             "result": {
               "status": "passed",
